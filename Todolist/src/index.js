@@ -3,7 +3,7 @@
 const express = require("express");
 const router = express.Router();
 
-const postctrl = require("./todoController");
+const posttodo = require("./todoController");
 
 router.get("/", (req, res) => {
     res.send("화이팅");
@@ -14,9 +14,8 @@ router.get("/post", (req,res) => {
     res.send("글작성 공간");
 });
 
-router.post("/post", (req, res) => {
-    
-});
+router.post("/post", posttodo);
+
 
 
 
